@@ -20,6 +20,16 @@
 # production
 /build
 
+# foundarty files:
+# Foundry build/cache
+foundary/out/
+foundary/cache/
+foundary/broadcast/**/*.json
+foundary/lib/
+foundary/artifacts/
+foundary/.env
+foundary/README.md
+foundary/lcov.info
 # misc
 .DS_Store
 *.pem
