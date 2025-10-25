@@ -6,7 +6,7 @@ export default function formatPrice(priceStr: string) {
         const fraction = bigIntPrice % BigInt(10 ** 6)
 
         const wholeStr = whole.toString()
-        let fractionStr = fraction.toString().padStart(6, "0")
+        const fractionStr = fraction.toString().padStart(6, "0")
 
         const trimmedFraction = fractionStr.replace(/0+$/, "")
 

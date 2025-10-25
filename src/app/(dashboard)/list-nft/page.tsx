@@ -2,7 +2,6 @@
 "use client"
 
 import { useAccount, useChainId } from "wagmi"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 import { chainsToContracts } from "@/constants/constants"
 import ListNftForm from "@/components/(dashboard)/ListNftForm"
 

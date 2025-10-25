@@ -9,7 +9,6 @@ import {
     useReadContract,
     useWaitForTransactionReceipt,
 } from "wagmi"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 import { chainsToContracts, erc20Abi, marketplaceAbi } from "@/constants/constants"
 import NFTBox from "@/components/(dashboard)/NftBox"
 
