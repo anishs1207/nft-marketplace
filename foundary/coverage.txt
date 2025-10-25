@@ -1,0 +1,82 @@
+Compiling 59 files with Solc 0.8.30
+Solc 0.8.30 finished in 2.57s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 7 tests for test/MoodNftTest.t.sol:MoodNftTest
+[PASS] test_FlipMoodByApprovedAddress() (gas: 135770)
+[PASS] test_FlipMoodChangesState() (gas: 92712)
+[PASS] test_GettersReturnCorrectValues() (gas: 94250)
+[PASS] test_MintNftIncrementsCounterAndEmitsEvent() (gas: 86830)
+[PASS] test_MintNftToSpecificAddress() (gas: 82346)
+[PASS] test_RevertWhen_FlipMoodByNonOwnerOrNotApproved() (gas: 88812)
+[PASS] test_RevertWhen_TokenUriNonExistentToken() (gas: 13741)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 1.84ms (1.92ms CPU time)
+
+Ran 8 tests for test/FlowCoin.t.sol:FlowCoinTest
+[PASS] test_ApproveAndTransferFrom() (gas: 122580)
+[PASS] test_InitialSetup() (gas: 21902)
+[PASS] test_MintIncreasesBalanceAndSupply() (gas: 58462)
+[PASS] test_MintReturnsTrue() (gas: 55545)
+[PASS] test_MultipleMintsAccumulateCorrectly() (gas: 89246)
+[PASS] test_RevertWhen_TransferFromWithoutApproval() (gas: 66259)
+[PASS] test_TransferBetweenUsers() (gas: 91450)
+[PASS] test_TransferRevertsWhenInsufficientBalance() (gas: 16975)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 3.22ms (2.23ms CPU time)
+
+Ran 19 tests for test/NftMarketplaceTest.t.sol:NftMarketplaceTest
+[PASS] test_BuyItem() (gas: 195148)
+[PASS] test_BuyItemWithReentrancyGuard() (gas: 188136)
+[PASS] test_CancelListing() (gas: 83632)
+[PASS] test_ListItem() (gas: 103102)
+[PASS] test_MultipleListingsAndSales() (gas: 340220)
+[PASS] test_RevertWhen_BuyItemInsufficientAllowance() (gas: 130351)
+[PASS] test_RevertWhen_BuyItemNotListed() (gas: 19889)
+[PASS] test_RevertWhen_CancelListingNotListed() (gas: 26191)
+[PASS] test_RevertWhen_CancelListingNotOwner() (gas: 103000)
+[PASS] test_RevertWhen_ListItemAlreadyListed() (gas: 101162)
+[PASS] test_RevertWhen_ListItemNotApproved() (gas: 29511)
+[PASS] test_RevertWhen_ListItemNotOwner() (gas: 25428)
+[PASS] test_RevertWhen_ListItemPriceZero() (gas: 51939)
+[PASS] test_RevertWhen_UpdateListingNotListed() (gas: 20287)
+[PASS] test_RevertWhen_UpdateListingNotOwner() (gas: 109168)
+[PASS] test_RevertWhen_UpdateListingZeroPrice() (gas: 107065)
+[PASS] test_RevertWhen_WithdrawProceedsNoProceeds() (gas: 13732)
+[PASS] test_UpdateListing() (gas: 113378)
+[PASS] test_WithdrawProceeds() (gas: 214302)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 3.75ms (8.51ms CPU time)
+
+Ran 1 test for test/CakeNftTest.t.sol:BasicNftTest
+[PASS] testBakeCake() (gas: 1387746)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 4.80ms (2.85ms CPU time)
+
+Ran 4 test suites in 18.45ms (13.60ms CPU time): 35 tests passed, 0 failed, 0 skipped (35 total tests)
+
+╭----------------------------------+------------------+------------------+----------------+----------------╮
+| File                             | % Lines          | % Statements     | % Branches     | % Funcs        |
++==========================================================================================================+
+| script/DeployCakeNft.s.sol       | 0.00% (0/8)      | 0.00% (0/8)      | 100.00% (0/0)  | 0.00% (0/2)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| script/DeployMoodNft.s.sol       | 0.00% (0/13)     | 0.00% (0/14)     | 100.00% (0/0)  | 0.00% (0/3)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| script/DeployNftMarkeplace.s.sol | 0.00% (0/5)      | 0.00% (0/5)      | 100.00% (0/0)  | 0.00% (0/1)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| script/MintAndListNft.s.sol      | 0.00% (0/16)     | 0.00% (0/14)     | 100.00% (0/0)  | 0.00% (0/3)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| script/MintFlowCoin.s.sol        | 0.00% (0/5)      | 0.00% (0/4)      | 100.00% (0/0)  | 0.00% (0/1)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| script/SetupAnvil.s.sol          | 0.00% (0/29)     | 0.00% (0/31)     | 100.00% (0/0)  | 0.00% (0/1)    |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| src/CakeNft.sol                  | 91.23% (52/57)   | 96.55% (56/58)   | 0.00% (0/1)    | 78.57% (11/14) |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| src/FlowCoin.sol                 | 60.00% (3/5)     | 66.67% (2/3)     | 100.00% (0/0)  | 50.00% (1/2)   |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| src/MoodNft.sol                  | 80.00% (28/35)   | 80.65% (25/31)   | 60.00% (3/5)   | 88.89% (8/9)   |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| src/NftMarkeplace.sol            | 96.00% (48/50)   | 97.50% (39/40)   | 100.00% (7/7)  | 91.67% (11/12) |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| test/mocks/Mocks.sol             | 40.00% (4/10)    | 40.00% (2/5)     | 100.00% (0/0)  | 40.00% (2/5)   |
+|----------------------------------+------------------+------------------+----------------+----------------|
+| Total                            | 57.94% (135/233) | 58.22% (124/213) | 76.92% (10/13) | 62.26% (33/53) |
+╰----------------------------------+------------------+------------------+----------------+----------------╯
