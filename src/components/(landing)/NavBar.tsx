@@ -22,7 +22,7 @@ export default function NavBar() {
             <div className="flex items-center gap-2 md:gap-4">
                 <Link href="/" className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
-                        MM test
+                        MM t
                     </div>
                     <h1 className="hidden md:block font-bold text-2xl tracking-tight">
                         MetaMint
