@@ -3,8 +3,6 @@
 -   Frontend: Nextjs
 -   Contracts: Foundary (Solidity)
 
-CA5X0JSsvSu6UaifuiWncEVk
-
 # Process:
 
 0. init new repo

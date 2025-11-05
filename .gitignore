@@ -34,6 +34,8 @@ foundary/lcov.info
 .DS_Store
 *.pem
 
+NOTES.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
