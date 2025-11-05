@@ -62,6 +62,7 @@ export default function RecentlyListedNFTs() {
                         <NftBox
                             key={idx}
                             tokenId={nft.tokenId}
+                            //@ts-expect-error
                             image={nft.image}
                             price={ethers.formatUnits(nft.price, 6)}
                             owner={nft.seller}

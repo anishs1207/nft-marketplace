@@ -118,7 +118,7 @@ export default function NFTContractForm({ contractAddress }: NFTContractFormProp
                         href="https://sepolia.etherscan.io/address/0x85457472db2a41a761127e8d3db9348b35908ded#code"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-purple-600 hover:underline"
+                        className="text-purple-600 hover:underline"
                     >
                         0x85457472Db2A41a761127E8d3db9348b35908deD
                     </a>
