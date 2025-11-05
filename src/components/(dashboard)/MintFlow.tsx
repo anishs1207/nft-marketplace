@@ -9,7 +9,6 @@ import {
 } from "wagmi"
 import { erc20Abi } from "@/constants/constants"
 import { ethers } from "ethers"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 export default function MintERC20() {
     const { data: hash, error, isPending, writeContract } = useWriteContract()

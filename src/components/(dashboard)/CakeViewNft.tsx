@@ -15,7 +15,7 @@ interface NFTContractFormProps {
 }
 
 export default function NFTContractForm({ contractAddress }: NFTContractFormProps) {
-    const account = useAccount()
+    // const account = useAccount()
     const chainId = useChainId()
 
     const cakeContractAddress = useMemo(() => {
@@ -29,8 +29,8 @@ export default function NFTContractForm({ contractAddress }: NFTContractFormProp
 
     const {
         data: bakeCakeHash,
-        isPending: isBakePending,
-        error: bakeCakeError,
+        // isPending: isBakePending,
+        // error: bakeCakeError,
         writeContractAsync: writeBakeCakeAsync,
     } = useWriteContract()
 

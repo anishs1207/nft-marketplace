@@ -4,7 +4,8 @@ import { useState } from "react"
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Home, ShoppingBag, PlusCircle, Sparkles } from "lucide-react"
+import { Menu, ShoppingBag, PlusCircle, } from "lucide-react";
+import Link from "next/link";
 
 export default function NavBar() {
     const [open, setOpen] = useState(false)
@@ -19,14 +20,14 @@ export default function NavBar() {
         <nav className="w-full bg-black text-white border-b border-zinc-800 px-6 md:px-8 py-4 flex items-center justify-between shadow-lg xl:min-h-[77px]">
             {/* Left: Logo */}
             <div className="flex items-center gap-2 md:gap-4">
-                <a href="/" className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
                         MM
                     </div>
                     <h1 className="hidden md:block font-bold text-2xl tracking-tight">
                         MetaMint
                     </h1>
-                </a>
+                </Link>
             </div>
 
             {/* Middle: Desktop Links */}

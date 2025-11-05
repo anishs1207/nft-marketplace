@@ -16,7 +16,7 @@ interface NFTContractFormProps {
 }
 
 export default function NFTContractForm({ contractAddress }: NFTContractFormProps) {
-    const account = useAccount()
+    // const account = useAccount()
     const chainId = useChainId()
 
     const cakeContractAddress = useMemo(() => {

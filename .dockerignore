@@ -1,0 +1,59 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Logs
+logs
+*.log
+
+# Next.js / Build outputs
+.next
+out
+dist
+build
+coverage
+
+# Local env files
+.env
+.env.*
+!.env.production    # keep production env if you want to COPY it
+
+# Git & config files
+.git
+.gitignore
+.gitmodules
+
+# Prettier / eslint / tooling
+.prettierrc
+.prettierignore
+.eslintrc*
+stylelint.config.js
+.prettier*
+
+# System / OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE / Editor files
+.vscode
+.idea
+*.code-workspace
+
+# Cache directories
+.cache
+.npm
+.pnpm-store
+.yarn
+.yarn/cache
+
+# Misc folders
+public/**/*.psd
+public/**/*.ai
+public/**/*.sketch
+foundary/
+
+# Docker / Task runners
+Taskfile.yml

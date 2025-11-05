@@ -6,7 +6,6 @@ import { ConnectButton } from "@rainbow-me/rainbowkit"
 import { chainsToContracts } from "@/constants/constants"
 import * as React from "react"
 import {
-  type BaseError,
   useWriteContract,
   useWaitForTransactionReceipt,
   useAccount,
@@ -21,30 +20,15 @@ export default function Home() {
   const chainId = useChainId()
   const chainSupported =
     chainId in chainsToContracts && chainsToContracts[chainId]?.cakeNft !== undefined
-  const { data: hash, error, isPending, writeContract } = useWriteContract()
+  const { data: hash, writeContract } = useWriteContract()
   const { address, isConnected } = useAccount()
-  const [amount, setAmount] = React.useState("")
+  const [amount, _] = React.useState("")
   const [recipient, setRecipient] = React.useState<any>("")
   const decimals = 6
 
   React.useEffect(() => {
     if (isConnected && address) setRecipient(address)
   }, [isConnected, address])
-
-  async function submit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    if (!amount || !recipient) return
-
-    writeContract({
-      address: "0x29f32E5c09Edbb16BabA9e4a43CD9651E8Fd1785",
-      abi: erc20Abi,
-      functionName: "mint",
-      args: [recipient, ethers.parseUnits(amount, decimals)],
-    })
-  }
-
-  const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({ hash })
-
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white flex flex-col">
