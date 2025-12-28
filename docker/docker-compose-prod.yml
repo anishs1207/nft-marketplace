@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nextjs-frontend:
-    image: anishs1207/nft-markepalce:latest
+    image: anishs1207/nft-marketplace:latest
     read_only: true
     networks:
       - frontend

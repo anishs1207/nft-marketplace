@@ -14,3 +14,14 @@
 install these: npm install wagmi @rainbow-me/rainbowkit ethers
 
 -   used to list nfts and view nfts
+
+# TODO:
+1. audiing this given codebase here
+2. also aws
+3. write tets for list nft and biy nft also
+4. add an exclaidra image to show the backend foundary archiecture here
+5. deploy to dockerhub & dockerfiles
+6. check if cicd pipelines is working (with vercel)
+7. add commands in the task.yml file here
+8. add some ai concept here in backend api here
+9. write docs for it

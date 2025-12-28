@@ -1,3 +1,5 @@
+import { NavBar, Footer } from "@/components/(landing)";
+
 export default function DashboardLayout({
     children,
 }: Readonly<{
@@ -5,7 +7,9 @@ export default function DashboardLayout({
 }>) {
     return (
         <>
+            <NavBar />
             {children}
+            <Footer />
         </>
     );
 }

@@ -1,47 +1,58 @@
 ---
-title: "Authentication"
+sidebarTitle: Introduction
 ---
 
-import { Fragment } from "react"
+import { Steps } from "nextra/components"
 
-# Authentication
+# Customize the Cascade Layers
 
-Cal.com uses <span style={{ color: "#0b79d0", fontWeight: "bold" }}>API keys</span> to authenticate all API requests. This ensures that only authorized clients can access your account and perform operations. API keys can be viewed and managed in your account under the <span style={{ color: "#0b79d0", fontWeight: "bold" }}>Security</span> settings.
+In some scenarios, you may need more control over the Nextra predefined CSS to
+avoid unintended overrides of styles within cascade layers. Below is an example
+of how `nextra-theme-docs` uses
+[postcss-import](https://github.com/postcss/postcss-import) to place predefined
+CSS into a specified cascade layer:
 
----
+<Steps>
 
-## 🔑 API Key Types
+## Install `postcss-import`
 
-Cal.com provides **two types of API keys**:
+Install `postcss-import` and add it to `postcss.config.mjs`:
 
--   **Test Mode Keys**: <span style={{ color: "#f39c12" }}>Used for testing and development.</span>  
-    Start with: <span style={{ color: "#27ae60", fontWeight: "bold" }}>cal\_</span>
-
--   **Live Mode Keys**: <span style={{ color: "#e74c3c" }}>Used for production.</span>  
-    Start with: <span style={{ color: "#c0392b", fontWeight: "bold" }}>cal*live*</span>
-
-<blockquote
-    style={{
-        borderLeft: "4px solid #e67e22",
-        paddingLeft: "12px",
-        color: "#e67e22",
-        backgroundColor: "#fff8e1",
-    }}
->
-    ⚠️ <strong>Important:</strong> Keep your API keys secure! Never share them publicly or commit
-    them to version control. Treat them like passwords.
-</blockquote>
-
----
-
-## 🛠️ How to Use API Keys
-
-You can authenticate your requests either by **query parameter** or **HTTP header**. Using headers is recommended for security.
-
-### 1. Query Parameter
-
-Append the `apiKey` to your request URL:
-
-```bash
-curl "https://api.cal.com/v1/endpoint?apiKey=cal_live_xxxxxx"
+```js filename="postcss.config.mjs"
+export default {
+    plugins: {
+        "postcss-import": {},
+        // ... your other PostCSS plugins (e.g., `autoprefixer`, `cssnano`)
+    },
+}
 ```
+
+## Set up the cascade layers
+
+In your CSS file (e.g. `styles.css`), import the `nextra-docs-theme` CSS and
+specify the layers:
+
+```css filename="styles.css"
+@layer nextra, my-base;
+
+@import "nextra-theme-docs/dist/style.css" layer(nextra);
+
+@layer my-base {
+    /* my base styles */
+}
+```
+
+## Import your CSS file
+
+Import your CSS file at the top-level layout of your application (e.g.
+`app/layout.jsx`) to apply the styles.
+
+```jsx filename="app/layout.jsx"
+import "../path/to/your/styles.css"
+
+export default async function RootLayout({ children }) {
+    // ... Your layout logic here
+}
+```
+
+</Steps>
