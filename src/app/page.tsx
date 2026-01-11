@@ -35,7 +35,7 @@ export default function Home() {
       <main className="flex-1 container mx-auto px-4 py-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8 text-purple-400 text-center">
-            Cake NFT Bakery test
+            Cake NFT Bakery
           </h1>
 
           {/* Connection Status */}
