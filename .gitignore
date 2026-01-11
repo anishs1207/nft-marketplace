@@ -54,6 +54,8 @@ next-env.d.ts
 
 .vercel
 
+TODO.md
+
 # Playwright
 node_modules/
 /test-results/
