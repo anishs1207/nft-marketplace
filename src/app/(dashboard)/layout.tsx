@@ -7,9 +7,9 @@ export default function DashboardLayout({
 }>) {
     return (
         <>
-            <NavBar />
+
             {children}
-            <Footer />
+
         </>
     );
 }

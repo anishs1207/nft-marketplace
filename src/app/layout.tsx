@@ -32,9 +32,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
+
         <Providers>
+          <NavBar />
           {children}
+          <Footer />
         </Providers>
+
       </body>
     </html>
   );
